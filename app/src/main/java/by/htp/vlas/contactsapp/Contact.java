@@ -7,6 +7,9 @@ import java.util.Date;
  */
 public class Contact {
 
+    public static final boolean EDITABLE = true;
+    public static final boolean NOT_EDITABLE = false;
+
     private static int sCounter = 0;
 
     private int mId;

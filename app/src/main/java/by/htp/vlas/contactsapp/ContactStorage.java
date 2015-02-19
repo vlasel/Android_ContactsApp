@@ -28,10 +28,10 @@ public class ContactStorage {
         return sContacts;
     }
 
-    public Contact getById(int pId) {
+    public Contact getByPosition(int pPosition) {
         Contact contact = null;
-        if(pId >=0 && pId < sContacts.size()) {
-            contact = sContacts.get(pId);
+        if(pPosition >=0 && pPosition < sContacts.size()) {
+            contact = sContacts.get(pPosition);
         }
         return contact;
     }
