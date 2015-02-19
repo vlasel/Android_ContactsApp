@@ -1,7 +1,6 @@
 package by.htp.vlas.contactsapp;
 
-import static by.htp.vlas.contactsapp.ContactActivity.EXTRA_CONTACT_ID;
-import static by.htp.vlas.contactsapp.ContactActivity.EXTRA_CONTACT_EDITABLE;
+import static by.htp.vlas.contactsapp.ContactActivity.EXTRA_CONTACT;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import contacts.vlas.htp.by.contactsapp.R;
@@ -34,9 +35,7 @@ public class ContactListActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ContactListActivity.this, ContactActivity.class);
-                intent.putExtra(EXTRA_CONTACT_ID, position);
-                intent.putExtra(EXTRA_CONTACT_EDITABLE, Contact.NOT_EDITABLE);
-//                intent.putExtra(EXTRA_CONTACT_EDITABLE, Contact.EDITABLE);
+                intent.putExtra(EXTRA_CONTACT, id);
                 startActivity(intent);
             }
 
